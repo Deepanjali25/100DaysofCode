@@ -3,9 +3,7 @@ import java.util.Stack;
 // A class that supports all the stack operations and one additional operation getMin() that returns
 // the minimum element from stack at any time. This class inherits from the stack class and uses an
 // auxiliary stack that holds minimum elements
-public class DesignAndImplementSpecialStackDataStructure {
-}
-class SpecialStack extends Stack<Integer> {
+class DesignAndImplementSpecialStackDataStructure extends Stack<Integer> {
     Stack<Integer> min = new Stack<>();
     /* SpecialStack's member method to insert an element to it. This method makes sure that the min stack is
     also updated with appropriate minimum values */
@@ -24,8 +22,8 @@ class SpecialStack extends Stack<Integer> {
                 min.push(y);
         }
     }
-    /* SpecialStack's member method to insert an element to it. This method makes sure that the min stack is
-    also updated with appropriate minimum values */
+    // SpecialStack's member method to insert an element to it.
+    // This method makes sure that the min stack is also updated with appropriate minimum values.
     public Integer pop() {
         int x = super.pop();
         min.pop();
@@ -38,7 +36,7 @@ class SpecialStack extends Stack<Integer> {
         return x;
     }
     public static void main(String[] args) {
-        SpecialStack s = new SpecialStack();
+        DesignAndImplementSpecialStackDataStructure s = new DesignAndImplementSpecialStackDataStructure();
         s.push(10);
         s.push(20);
         s.push(30);
